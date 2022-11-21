@@ -6,9 +6,10 @@ void print_str(va_list s);
  * @c: char to be printed
  * Return: char
  */
-void print_chars(va_list arg)
+int print_chars(va_list arg)
 {
-	_putchar(va_arg(arg, int));
+	int c = va_arg(arg, int);
+	return(_putchar(c));
 }
 
 /**
