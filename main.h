@@ -9,12 +9,18 @@
 /**
  * struct format_print - args passed to the function
  * @c: char specifier
- * @type_args: type of argument / function pointer
+ * @print_s: type of argument / function pointer
  */
 typedef struct format_print
 {
 	char c;
-	int (*type_args)(va_list);
+	int (*print_fmt)(va_list);
 } format_p;
 int _printf(const char *format, ...);
+int wprint(const char *format, va_list arg);
+int (*get_func(char s))(va_list);
+void print_c(va_list arg);
+void print_s(va_list arg);
+int _strlen(char *s);
+int _putchar(char c);
 #endif
