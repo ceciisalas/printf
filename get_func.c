@@ -19,7 +19,7 @@ int (*get_func)(char *s)(va_list)
         {
                 if (*ops[i].c == *s)
 		{
-			return (format_p[i].print_fmt);
+			return (ops[i].print_fmt);
 		}
 	}
 	return (NULL);
