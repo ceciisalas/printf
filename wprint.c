@@ -24,6 +24,7 @@ int wprint(const char *format, va_list arg)
 			else if (format[i + 1] != 0)
 			{
 				ptr_getfunc = get_func(format[i + 1]);
+				count += (o ? o(arg) : _putchar(format[i]) + _putchar(format[i + 1]));
 			}
 		}
 		else
