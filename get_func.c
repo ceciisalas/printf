@@ -21,6 +21,7 @@ int (*get_func(char s))(va_list)
 		{
 			return (ops[i].print_fmt);
 		}
+		i++;
 	}
 	return (NULL);
 }
