@@ -22,7 +22,7 @@ int wprint(const char *format, va_list arg)
 				i++;
 			}
 			ptr_getfunc = get_func(format[i + 1]);
-			if (ptr_getfunc == NULL)
+			if (ptr_getfunc)
 			{
 				flagCount += ptr_getfunc(arg);
 				flagCount += _putchar(format[i] + _putchar(format[i+1]));
@@ -32,6 +32,7 @@ int wprint(const char *format, va_list arg)
 		else
 		{
 			_putchar(format[i]);
+			flagCount++;
 		}
 	}
 	return (flagCount);
