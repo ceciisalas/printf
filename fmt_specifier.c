@@ -28,7 +28,7 @@ int print_s(va_list arg)
 
 	if (s == NULL)
 	{
-		s = "(null)";
+		s = "";
 	}
 	strlen = _strlen(s);
 	if (s)
