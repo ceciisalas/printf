@@ -8,7 +8,7 @@
  */
 int wprint(const char *format, va_list arg)
 {
-	int i, flagCount;
+	unsigned i, flagCount;
 	int (*ptr_getfunc)(va_list);
 
 	flagCount = 0;
@@ -18,13 +18,17 @@ int wprint(const char *format, va_list arg)
 		{
 			if (format[i + 1] == '%')
 			{
-				flagcCount += _putchar(format[i]);
+				flagCount += _putchar(format[i]);
 				i++;
 			}
 			else if (format[i + 1] != 0)
 			{
 				ptr_getfunc = get_func(format[i + 1]);
-				count += (o ? o(arg) : _putchar(format[i]) + _putchar(format[i + 1]));
+				if (ptr_getfunc(arg))
+				{
+					flagCount += _putchar(format[i]) + _putchar(format[i + 1]);
+					i++;
+				}
 			}
 		}
 		else
