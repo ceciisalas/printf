@@ -9,7 +9,7 @@
 /**
  * struct format_print - args passed to the function
  * @c: char specifier
- * @print_s: type of argument / function pointer
+ * @print_fmt:function pointer
  */
 typedef struct format_print
 {
