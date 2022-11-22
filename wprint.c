@@ -8,7 +8,7 @@
  */
 int wprint(const char *format, va_list arg)
 {
-	unsigned i, flagCount;
+	int i, flagCount;
 	int (*ptr_getfunc)(va_list);
 
 	flagCount = 0;
