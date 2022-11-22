@@ -16,7 +16,7 @@ int wprint(const char *format, va_list arg)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
+			if (format[i + 1] != '%')
 			{
 			flagCount += _putchar(format[i]);
 			i++;
