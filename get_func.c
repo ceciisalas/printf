@@ -17,7 +17,7 @@ int (*get_func(char s))(va_list)
 	i = 0;
 	while (ops[i].c)
 	{
-		if (*ops[i].c == s)
+		if (ops[i].c == s)
 		{
 			return (ops[i].print_fmt);
 			i++;
