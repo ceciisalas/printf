@@ -19,8 +19,9 @@ typedef struct format_print
 int _printf(const char *format, ...);
 int wprint(const char *format, va_list arg);
 int (*get_func(char s))(va_list);
-void print_c(va_list arg);
-void print_s(va_list arg);
+int print_c(va_list arg);
+int print_s(va_list arg);
+void printf_s(char *);
 int _strlen(char *s);
 int _putchar(char c);
 #endif

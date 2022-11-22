@@ -1,6 +1,6 @@
 #include "main.h"
-void print_chars(va_list c);
-void print_str(va_list s);
+int print_chars(va_list);
+int print_str(va_list);
 /**
  * print_chars - prints a char
  * @c: char to be printed
@@ -8,8 +8,8 @@ void print_str(va_list s);
  */
 int print_chars(va_list arg)
 {
-	int c = va_arg(arg, int);
-	return(_putchar(c));
+	_putchar(va_arg(arg, int));
+	return (1);
 }
 
 /**
@@ -17,20 +17,20 @@ int print_chars(va_list arg)
  * @s: string to be printed
  * Return: string
  */
-void print_str(va_list arg)
+int print_str(va_list arg)
 {
 	int strlen;
-	char *s = va_arg(s, char *);
+	char *s;
+	s = va_arg(arg, char *);
 
 	if (s == NULL)
 	{
-		_putchar("NULL");
-		return;
+		s = "(null)";
 	}
-	strlen = _strlen(*s);
-	if (*s)
+	strlen = _strlen(s);
+	if (s)
 	{
-		_putchar(*s);
+		printf_s(s);
 	}
 	return (strlen);
 }
