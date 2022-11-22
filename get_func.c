@@ -15,7 +15,7 @@ int (*get_func(char s))(va_list)
 	};
 
 	i = 0;
-	while (ops[i].c)
+	while (ops[i].c < 2)
 	{
 		if (ops[i].c == s)
 		{
