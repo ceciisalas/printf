@@ -1,12 +1,12 @@
 #include "main.h"
-int print_chars(va_list);
-int print_str(va_list);
+int print_c(va_list);
+int print_s(va_list);
 /**
  * print_chars - prints a char
  * @c: char to be printed
  * Return: char
  */
-int print_chars(va_list arg)
+int print_c(va_list arg)
 {
 	_putchar(va_arg(arg, int));
 	return (1);
@@ -17,7 +17,7 @@ int print_chars(va_list arg)
  * @s: string to be printed
  * Return: string
  */
-int print_str(va_list arg)
+int print_s(va_list arg)
 {
 	int strlen;
 	char *s;
