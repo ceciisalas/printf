@@ -15,13 +15,13 @@ int (*get_func(char s))(va_list)
 	};
 
 	i = 0;
-	while (ops[i].c < 2)
+	while (ops[i].c)
 	{
-		if (ops[i].c == s)
+		if (s == ops[i].c)
 		{
 			return (ops[i].print_fmt);
-			i++;
 		}
+		i++;
 	}
 	return (NULL);
 }
