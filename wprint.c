@@ -32,7 +32,6 @@ int wprint(const char *format, va_list arg)
 		else
 		{
 			_putchar(format[i]);
-			flagCount++;
 		}
 	}
 	return (flagCount);
