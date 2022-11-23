@@ -16,8 +16,6 @@ int wprint(const char *format, va_list arg)
 	{
 		if (format[i] == '%')
 		{
-			flagCount++;
-
 			if (format[i + 1] == '%')
 			{
 				flagCount += _putchar(format[i]);
@@ -26,8 +24,7 @@ int wprint(const char *format, va_list arg)
 			ptr_getfunc = get_func(format[i + 1]);
 			if (ptr_getfunc)
 			{
-				flagCount += ptr_getfunc(arg);
-				flagCount += _putchar(format[i] + _putchar(format[i + 1]));
+				flagCount += ptr_getfunc(arg) +  _putchar(format[i] + _putchar(format[i + 1]));
 				i++;
 			}
 		}
