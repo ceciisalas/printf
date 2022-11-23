@@ -21,7 +21,6 @@ int wprint(const char *format, va_list arg);
 int (*get_func(char s))(va_list arg);
 int print_c(va_list arg);
 int print_s(va_list arg);
-void printf_s(char *);
 int _strlen(char *s);
 int _putchar(char c);
 #endif
