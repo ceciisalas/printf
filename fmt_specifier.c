@@ -33,7 +33,7 @@ int print_s(va_list arg)
 	strlen = _strlen(s);
 	if (s)
 	{
-		_putchar(s);
+		_putchar(*s);
 	}
 	return (strlen);
 }
